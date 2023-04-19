@@ -1,0 +1,97 @@
+.container {
+  position: relative;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.box {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.innerBox {
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 0;
+  border: 1px solid #cdcfca;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.cardImage {
+  background-color: #afb0ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cardImage img {
+  border-radius: 2px 2px 0 0;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  color: rgb(29, 28, 28);
+}
+
+.mainIcon {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  font-size: 19px;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 10px 10px;
+}
+
+.actions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #d5d0d0;
+  border-top: 1px solid #cdcfca;
+}
+
+.actions > li :not(:last-child) {
+  border-right: 1px solid #9ea09c;
+}
+
+.actions > li {
+  float: left;
+  margin: 12px 0;
+  color: #cdcfca;
+  text-align: center;
+}
+
+.actions > li > span {
+  position: relative;
+  display: inline-block;
+  min-width: 32px;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .box {
+    display: block;
+    box-sizing: border-box;
+    width: 25%;
+  }
+}
