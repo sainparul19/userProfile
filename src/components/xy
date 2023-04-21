@@ -1,0 +1,127 @@
+<!-- const Post = ({blogs}) => {
+return (
+    <div className="container">
+        {blogs.map((blog) => (
+          <div className="box" key = {blog.id}>
+            <div className="innerBox">
+              <div className="card">
+                <div className="cardImage">
+                  <img
+                    style={{ width: 200, height: 200 }}
+                    src="https://avatars.dicebear.com/v2/avataaars/{{username}}.svg?options[mood][]=happy"
+                    alt="avatar"
+                  />
+                </div>
+              </div>
+              <div className="cardBody">
+                <h3>{blog.name}</h3>
+                <div className="mainIcon">
+                  <i className="icon">
+                    <MailOutlined />
+                  </i>
+                  <p>{blog.email}</p>
+                </div>
+                <div className="mainIcon">
+                  <i className="icon">
+                    <PhoneOutlined />{" "}
+                  </i>
+                  <p>{blog.phone}</p>
+                </div>
+                <div className="mainIcon">
+                  <i className="icon">
+                    <GlobalOutlined />
+                  </i>
+                  <p>{blog.website}</p>
+                </div>
+              </div>
+    
+              <ul className="actions">
+                <li>
+                  <span>
+                    <i className="icon" style={{ color: "red" }}>
+                      <HeartOutlined />
+                    </i>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="icon" style={{ color: "black" }}>
+                      <EditOutlined />
+                    </i>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <i className="icon" style={{ color: "black" }}>
+                      <DeleteFilled />
+                    </i>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+)
+} -->
+
+<!-- {person.map(({ name, avatar, email, phone, website }) => (
+        <div className="box">
+          <div className="innerBox">
+            <div className="card">
+              <div className="cardImage">
+                <img
+                  style={{ width: 200, height: 200 }}
+                  src={avatar}
+                  alt="avatar"
+                />
+              </div>
+            </div>
+            <div className="cardBody">
+              <h3>{name}</h3>
+              <div className="mainIcon">
+                <i className="icon">
+                  <MailOutlined />
+                </i>
+                <p>{email}</p>
+              </div>
+              <div className="mainIcon">
+                <i className="icon">
+                  <PhoneOutlined />{" "}
+                </i>
+                <p>{phone}</p>
+              </div>
+              <div className="mainIcon">
+                <i className="icon">
+                  <GlobalOutlined />
+                </i>
+                <p>{website}</p>
+              </div>
+            </div>
+
+            <ul className="actions">
+              <li>
+                <span>
+                  <i className="icon" style={{ color: "red" }}>
+                    <HeartOutlined />
+                  </i>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i className="icon" style={{ color: "black" }}>
+                    <EditOutlined />
+                  </i>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <i className="icon" style={{ color: "black" }}>
+                    <DeleteFilled />
+                  </i>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ))} -->

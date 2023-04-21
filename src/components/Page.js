@@ -6,9 +6,9 @@ import { GlobalOutlined } from "@ant-design/icons";
 import { HeartOutlined } from "@ant-design/icons";
 import { EditOutlined } from "@ant-design/icons";
 import { DeleteFilled } from "@ant-design/icons";
-import { person } from "./Post.js";
+import { person } from "./Post";
 
-function Page() {
+const Page = () => {
   return (
     <div className="container">
       {person.map(({ name, avatar, email, phone, website }) => (
@@ -73,6 +73,6 @@ function Page() {
       ))}
     </div>
   );
-}
+};
 
 export default Page;
