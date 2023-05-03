@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import "./Page.css";
-import { ApiContext } from "./ContextProvider";
+import { ApiContext } from "./Context";
 import { MailOutlined } from "@ant-design/icons";
 import { PhoneOutlined } from "@ant-design/icons";
 import { GlobalOutlined } from "@ant-design/icons";
+import { HeartFilled } from "@ant-design/icons";
 import { HeartOutlined } from "@ant-design/icons";
 import { EditOutlined } from "@ant-design/icons";
 import { DeleteFilled } from "@ant-design/icons";
@@ -15,9 +16,24 @@ const Page = () => {
     console.log(blog);
   }, [blog]);
 
+  function postLike(id) {
+    const temp = [...blog];
+    temp.forEach((item) => {
+      if (item.id == id) {
+        item.like = !item.like;
+      }
+    });
+    setBlog(temp);
+  }
+
+  function deleteUser(id) {
+    const temp = [...blog];
+    setBlog(temp.filter((item) => item.id !== id));
+  }
+
   return (
     <div className="container">
-      {blog.map((res, id) => (
+      {blog.map((res) => (
         <div className="box" key={res.id}>
           <div className="innerBox">
             <div className="card">
@@ -54,9 +70,9 @@ const Page = () => {
             <ul className="actions">
               <li>
                 <span>
-                  <button>
-                    <i className="icon" style={{ color: "red" }}>
-                      <HeartOutlined />
+                  <button onClick={() => postLike(res.id)}>
+                    <i className="heartIcon" style={{ color: "red" }}>
+                      {res.like ? <HeartFilled /> : <HeartOutlined />}
                     </i>
                   </button>
                 </span>
@@ -72,7 +88,7 @@ const Page = () => {
               </li>
               <li>
                 <span>
-                  <button>
+                  <button onClick={() => deleteUser(res.id)}>
                     <i className="icon" style={{ color: "black" }}>
                       <DeleteFilled />
                     </i>

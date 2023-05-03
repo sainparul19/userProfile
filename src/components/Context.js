@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { ApiContext } from "./ContextProvider";
+// import { ApiContext } from "./ContextProvider";
+import { createContext } from "react";
+export const ApiContext = createContext([]);
 
-function Post({ children }) {
+function Context({ children }) {
   const [blog, setBlog] = useState([]);
   useEffect(() => {
     axios
@@ -22,4 +24,4 @@ function Post({ children }) {
   );
 }
 
-export default Post;
+export default Context;

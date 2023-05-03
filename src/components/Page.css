@@ -8,10 +8,9 @@
 }
 
 .box {
-  position: relative;
-  min-height: 1px;
-  padding-left: 0;
-  padding-right: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .innerBox {
